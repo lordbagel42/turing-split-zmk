@@ -49,7 +49,7 @@
 		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-		&kp CAPS &kp C_MUTE &kp C_VOL_DOWN &kp C_VOL_UP &kp C_PLAY &trans &trans &trans &kp C_NEXT &kp C_PREV &kp C_STOP &kp UNDER &kp PLUS &trans
+		&kp CAPS &kp C_MUTE &kp C_VOL_DOWN &kp C_VOL_UP &kp C_PLAY &none &none &none &kp C_NEXT &kp C_PREV &kp C_STOP &kp UNDER &kp PLUS &none
 		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 		>;
 	};
