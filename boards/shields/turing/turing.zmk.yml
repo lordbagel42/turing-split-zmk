@@ -1,0 +1,14 @@
+file_format: "1"
+id: turing
+name: turing
+type: shield
+url: https://github.com/lordbagel42/highway-split-keyboard
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+siblings:
+  - turing_left
+  - turing_right
