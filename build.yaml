@@ -18,9 +18,9 @@
 #     artifact-name: corne_left_with_studio
 #
 include:
-  - board: nice_nano_v2
+  - board: nice_nano_v2/zmk
     shield: turing_left
     snippet: zmk-usb-logging
-  - board: nice_nano_v2
+  - board: nice_nano_v2/zmk
     shield: turing_right
     snippet: zmk-usb-logging
