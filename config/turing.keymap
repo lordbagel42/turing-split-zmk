@@ -1,8 +1,8 @@
 /*
-* Copyright (c) 2020 The ZMK Contributors
-*
-* SPDX-License-Identifier: MIT
-*/
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -11,62 +11,54 @@
 / {
 	keymap {
 		compatible = "zmk,keymap";
-		
+
 		default_layer {
 			// --------------------------------------------------------------------------------------------
-			// |  1  |  2  |  3   |  4    |  5   |                                     |    6    |   7   |  8    |  9   |   0   |
-			// |  Q  |  W  |  E   |  R    |  T   |                                     |    Y    |   U   |  I    |  O   |   P   |
-			// |  A  |  S  |  D   |  F    |  G   |                                     |    H    |   J   |  K    |  L   |   ;   |
-			// |  Z  |  X  |  C   |  V    |  B   | SHIFT |  UP  |------| LEFT  | CTRL  |   "]"   |   N   |  M    |  ,   |   .   |
-			//                    | RAISE | GUI  | LOWER | DOWN |------| RIGHT | SPACE |  ENTER  | RAISE |
+			// |  1  |  2  |  3    |  4    |   5   |                                     |    6    |   7   |  8    |  9   |   0   |
+			// |  Q  |  W  |  E    |  R    |   T   |                                     |    Y    |   U   |  I    |  O   |   P   |
+			// |  A  |  S  |  D    |  F    |   G   |                                     |    H    |   J   |  K    |  L   |   ;   |
+			// |  Z  |  X  |  C    |  V    |   B   | SHIFT |  UP  |------| LEFT  | CTRL  |    B    |   N   |  M    |  ,   |   .   |
+			//             | RAISE |  GUI  |       | LOWER | DOWN |------| RIGHT | SPACE |         | ENTER |  ALT  |
 			bindings = <
-			&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &trans     &trans     &trans     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
-			&kp Q      &kp W      &kp E      &kp R      &kp T      &trans     &trans     &trans     &kp Y      &kp U      &kp I      &kp O      &kp P      &trans
-			&kp A      &kp S      &kp D      &kp F      &kp G      &trans     &trans     &trans     &kp H      &kp J      &kp K      &kp L      &kp SEMI   &trans
-			&kp Z      &kp X      &kp C      &kp V      &kp B      &kp LSHFT  &kp UP     &trans     &kp LEFT   &kp LCTRL  &kp RBKT   &kp N      &kp M      &kp COMMA
-			&mo 1      &kp LGUI   &mo 2      &kp DOWN   &trans     &kp RIGHT  &kp SPACE  &kp RET    &mo 1      &trans     &trans     &trans     &trans     &kp DOT
+			&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &trans     &trans     &trans   &trans                          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+			&kp Q      &kp W      &kp E      &kp R      &kp T      &trans     &trans     &trans   &trans                          &kp Y      &kp U      &kp I      &kp O      &kp P
+			&kp A      &kp S      &kp D      &kp F      &kp G      &trans     &trans     &trans   &trans                          &kp H      &kp J      &kp K      &kp L      &kp SEMI
+			&kp Z      &kp X      &kp C      &kp V      &kp B      &kp LSHFT  &kp UP     &trans   &trans    &kp LEFT   &kp LCTRL  &kp B      &kp N      &kp M      &kp COMMA  &kp DOT
+			&trans     &trans     &mo 1      &kp LGUI   &trans     &mo 2      &kp DOWN   &trans   &trans    &kp RIGHT  &kp SPACE  &trans     &trans     &trans     &trans     &trans
 			>;
 		};
-		
-		// lower_layer {
-		//     // --------------------------------------------------------------------------------------------
-		//     // |BTCLR| BT1 | BT2  | BT3  | BT4  |                           | null | null | null  | null  | null  |
-		//     // | F1  | F2  | F3   | F4   | F5   |                           |  F6  |  F7  |  F8   |  F9   |  F10  |
-		//     // |  `  |  !  |  @   |  #   |  $   |                           |  %   |  ^   |  &    |  *    |  (    |
-		//     // |CAPS |MUTE | VOLD | VOLU | PLAY | null | null |------| null | NEXT | PREV | STOP  |  _    |  +    |
-		//     //                    | null | null | null | null |------| null | null | null |
-		//     bindings = <
-		//         &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans   &trans   &trans     &trans     &trans     &trans     &trans     &trans     &trans
-		//         &kp F1     &kp F2       &kp F3       &kp F4       &kp F5       &trans   &trans   &trans     &trans     &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
-		//         &kp GRAVE  &kp EXCL     &kp AT       &kp HASH     &kp DOLLAR   &trans   &trans   &trans     &trans     &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR
-		//         &kp CAPS   &kp C_MUTE   &kp C_VOL_DOWN &kp C_VOL_UP &kp C_PLAY &trans   &trans   &trans     &trans     &kp C_NEXT &kp C_PREV &kp C_STOP &kp UNDER  &kp PLUS
-		//         &trans     &trans       &trans       &trans       &trans       &trans   &trans   &trans     &trans     &trans     &trans     &trans     &trans     &trans
-		//     >;
-		// };
-		
+
 		lower_layer {
+			// Symbol / Navigation layer (hold LOWER)
+			// --------------------------------------------------------------------------------------------
+			// |  F1 |  F2 |  F3   |  F4   |  F5   |                                     |   F6    |  F7   |  F8   |  F9  |  F10  |
+			// |  !  |  @  |  #    |  $    |  %    |                                     |    ^    |  &    |  *    |  (   |   )   |
+			// |  `  |  ~  |  -    |  =    |  [    |                                     |    ]    |  '    |  "    |  :   |   /   |
+			// | ESC | TAB |  _    |  +    |  {    | SHIFT |  UP  |------| LEFT  | CTRL  |    }    |  \    |  |    |  <   |   >   |
+			//             | RAISE |  GUI  |       | LOWER | DOWN |------| RIGHT | SPACE |         | ENTER |  ALT  |
 			bindings = <
-			&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &trans     &trans     &trans     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
-			&kp Q      &kp W      &kp E      &kp R      &kp T      &trans     &trans     &trans     &kp Y      &kp U      &kp I      &kp O      &kp P      &trans
-			&kp A      &kp S      &kp D      &kp F      &kp G      &trans     &trans     &trans     &kp H      &kp J      &kp K      &kp L      &kp SEMI   &trans
-			&kp Z      &kp X      &kp C      &kp V      &kp B      &kp LSHFT  &kp UP     &trans     &kp LEFT   &kp LCTRL  &kp RBKT   &kp N      &kp M      &kp COMMA
-			&mo 1      &kp LGUI   &mo 2      &kp DOWN   &trans     &kp RIGHT  &kp SPACE  &kp RET    &mo 1      &trans     &trans     &trans     &trans     &kp DOT
+			&kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &trans     &trans     &trans   &trans                         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
+			&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &trans     &trans     &trans   &trans                         &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
+			&kp GRAVE  &kp TILDE  &kp MINUS  &kp EQUAL  &kp LBKT   &trans     &trans     &trans   &trans                         &kp RBKT   &kp SQT    &kp DQT    &kp COLON  &kp FSLH
+			&kp ESC    &kp TAB    &kp UNDER  &kp PLUS   &kp LBRC   &kp LSHFT  &kp UP     &trans   &trans   &kp LEFT   &kp LCTRL  &kp RBRC   &kp BSLH   &kp PIPE   &kp LT     &kp GT
+			&trans     &trans     &mo 1      &kp LGUI   &trans     &mo 2      &kp DOWN   &trans   &trans   &kp RIGHT  &kp SPACE  &trans     &trans     &trans     &trans     &trans
 			>;
 		};
-		
+
 		raise_layer {
+			// Function / Media / Bluetooth layer (hold RAISE)
 			// --------------------------------------------------------------------------------------------
-			// |     |     |      |      |      |                          |         |       |       |       |       |
-			// |  `  |  1  |  2   |  3   |  4   |                          |    5    |   6   |   7   |   8   |   9   |
-			// |HOME |PGDN |  ↑   |PGUP  | DEL  |                          |   ←     |   ↓   |   ↑   |   →   | BSPC  |
-			// | END |     |      |      |      |   |   |------|   |   |   |   +     |  -    |  =    |  [    |  ]    |
-			//                    |      |      |   |   |------|   |   |   |         |       |
+			// | F11 | F12 | PRSC  | SLCK  | PAUSE |                                     |  BT_CLR | BT_0  | BT_1  | BT_2 |  BT_3 |
+			// | INS | HOME| PGUP  |       |       |                                     |         | VOLU  | BRIU  |      |       |
+			// | DEL | END | PGDN  |       |       |                                     |  LEFT   | DOWN  |  UP   | RGHT |       |
+			// |     |     |       |       |       | SHIFT |  UP  |------| LEFT  | CTRL  |         | VOLD  | BRID  | MUTE | PLAY  |
+			//             | RAISE |  GUI  |       | LOWER | DOWN |------| RIGHT | SPACE |         | ENTER |  ALT  |
 			bindings = <
-			&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-			&kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4     &trans     &trans     &trans     &kp N5     &kp N6     &kp N7     &kp N8     &kp N9     &trans
-			&kp HOME   &kp PGDN   &kp UP     &kp PGUP   &kp DEL    &trans     &trans     &trans     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC   &trans
-			&kp END    &trans     &trans     &trans     &trans     &trans     &trans     &trans     &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT   &kp RBKT   &trans
-			&trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+			&kp F11    &kp F12    &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK &trans     &trans    &trans   &trans                         &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+			&kp INS    &kp HOME   &kp PG_UP  &trans     &trans          &trans     &trans    &trans   &trans                         &trans     &kp C_VOL_UP &kp C_BRI_UP &trans       &trans
+			&kp DEL    &kp END    &kp PG_DN  &trans     &trans          &trans     &trans    &trans   &trans                         &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT    &trans
+			&trans     &trans     &trans     &trans     &trans          &kp LSHFT  &kp UP    &trans   &trans   &kp LEFT   &kp LCTRL  &trans     &kp C_VOL_DN &kp C_BRI_DN &kp C_MUTE   &kp C_PP
+			&trans     &trans     &mo 1      &kp LGUI   &trans          &mo 2      &kp DOWN  &trans   &trans   &kp RIGHT  &kp SPACE  &trans     &trans       &trans       &trans       &trans
 			>;
 		};
 	};
