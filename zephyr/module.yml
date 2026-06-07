@@ -1,4 +1,6 @@
 name: zmk-keyboard-turing
 build:
+  cmake: boards/shields/turing
+  kconfig: boards/shields/turing/Kconfig.shield
   settings:
     board_root: .
