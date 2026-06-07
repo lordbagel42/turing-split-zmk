@@ -20,11 +20,11 @@
 			// |  Z  |  X  |  C    |  V    |   B   | SHIFT |  UP  |------| LEFT  | CTRL  |    B    |   N   |  M    |  ,   |   .   |
 			//             | RAISE |  GUI  |       | LOWER | DOWN |------| RIGHT | SPACE |         | ENTER |  ALT  |
 			bindings = <
-			&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &trans     &trans                            &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-			&kp Q      &kp W      &kp E      &kp R      &kp T      &trans     &trans                            &kp Y      &kp U      &kp I      &kp O      &kp P
-			&kp A      &kp S      &kp D      &kp F      &kp G      &trans     &trans                            &kp H      &kp J      &kp K      &kp L      &kp SEMI
-			&kp Z      &kp X      &kp C      &kp V      &kp B      &kp LSHFT  &kp UP      &kp LEFT   &kp LCTRL  &kp B      &kp N      &kp M      &kp COMMA  &kp DOT
-			&trans     &trans     &mo 1      &kp LGUI   &trans     &mo 2      &kp DOWN    &kp RIGHT  &kp SPACE  &trans     &trans     &trans     &trans     &trans
+			&kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &trans     &trans     &trans   &trans                          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+			&kp Q      &kp W      &kp E      &kp R      &kp T      &trans     &trans     &trans   &trans                          &kp Y      &kp U      &kp I      &kp O      &kp P
+			&kp A      &kp S      &kp D      &kp F      &kp G      &trans     &trans     &trans   &trans                          &kp H      &kp J      &kp K      &kp L      &kp SEMI
+			&kp Z      &kp X      &kp C      &kp V      &kp B      &kp LSHFT  &kp UP     &trans   &trans    &kp LEFT   &kp LCTRL  &kp B      &kp N      &kp M      &kp COMMA  &kp DOT
+			&trans     &trans     &mo 1      &kp LGUI   &trans     &mo 2      &kp DOWN   &trans   &trans    &kp RIGHT  &kp SPACE  &trans     &trans     &trans     &trans     &trans
 			>;
 		};
 
@@ -37,11 +37,11 @@
 			// | ESC | TAB |  _    |  +    |  {    | SHIFT |  UP  |------| LEFT  | CTRL  |    }    |  \    |  |    |  <   |   >   |
 			//             | RAISE |  GUI  |       | LOWER | DOWN |------| RIGHT | SPACE |         | ENTER |  ALT  |
 			bindings = <
-			&kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &trans     &trans                           &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
-			&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &trans     &trans                           &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
-			&kp GRAVE  &kp TILDE  &kp MINUS  &kp EQUAL  &kp LBKT   &trans     &trans                           &kp RBKT   &kp SQT    &kp DQT    &kp COLON  &kp FSLH
-			&kp ESC    &kp TAB    &kp UNDER  &kp PLUS   &kp LBRC   &kp LSHFT  &kp UP     &kp LEFT   &kp LCTRL  &kp RBRC   &kp BSLH   &kp PIPE   &kp LT     &kp GT
-			&trans     &trans     &mo 1      &kp LGUI   &trans     &mo 2      &kp DOWN   &kp RIGHT  &kp SPACE  &trans     &trans     &trans     &trans     &trans
+			&kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &trans     &trans     &trans   &trans                         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
+			&kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &trans     &trans     &trans   &trans                         &kp CARET  &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
+			&kp GRAVE  &kp TILDE  &kp MINUS  &kp EQUAL  &kp LBKT   &trans     &trans     &trans   &trans                         &kp RBKT   &kp SQT    &kp DQT    &kp COLON  &kp FSLH
+			&kp ESC    &kp TAB    &kp UNDER  &kp PLUS   &kp LBRC   &kp LSHFT  &kp UP     &trans   &trans   &kp LEFT   &kp LCTRL  &kp RBRC   &kp BSLH   &kp PIPE   &kp LT     &kp GT
+			&trans     &trans     &mo 1      &kp LGUI   &trans     &mo 2      &kp DOWN   &trans   &trans   &kp RIGHT  &kp SPACE  &trans     &trans     &trans     &trans     &trans
 			>;
 		};
 
@@ -54,11 +54,11 @@
 			// |     |     |       |       |       | SHIFT |  UP  |------| LEFT  | CTRL  |         | VOLD  | BRID  | MUTE | PLAY  |
 			//             | RAISE |  GUI  |       | LOWER | DOWN |------| RIGHT | SPACE |         | ENTER |  ALT  |
 			bindings = <
-			&kp F11    &kp F12    &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK &trans     &trans                           &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-			&kp INS    &kp HOME   &kp PG_UP  &trans     &trans          &trans     &trans                           &trans     &kp C_VOL_UP &kp C_BRI_UP &trans       &trans
-			&kp DEL    &kp END    &kp PG_DN  &trans     &trans          &trans     &trans                           &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT    &trans
-			&trans     &trans     &trans     &trans     &trans          &kp LSHFT  &kp UP     &kp LEFT   &kp LCTRL  &trans     &kp C_VOL_DN &kp C_BRI_DN &kp C_MUTE   &kp C_PP
-			&trans     &trans     &mo 1      &kp LGUI   &trans          &mo 2      &kp DOWN   &kp RIGHT  &kp SPACE  &trans     &trans       &trans       &trans       &trans
+			&kp F11    &kp F12    &kp PSCRN  &kp SLCK   &kp PAUSE_BREAK &trans     &trans    &trans   &trans                         &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+			&kp INS    &kp HOME   &kp PG_UP  &trans     &trans          &trans     &trans    &trans   &trans                         &trans     &kp C_VOL_UP &kp C_BRI_UP &trans       &trans
+			&kp DEL    &kp END    &kp PG_DN  &trans     &trans          &trans     &trans    &trans   &trans                         &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT    &trans
+			&trans     &trans     &trans     &trans     &trans          &kp LSHFT  &kp UP    &trans   &trans   &kp LEFT   &kp LCTRL  &trans     &kp C_VOL_DN &kp C_BRI_DN &kp C_MUTE   &kp C_PP
+			&trans     &trans     &mo 1      &kp LGUI   &trans          &mo 2      &kp DOWN  &trans   &trans   &kp RIGHT  &kp SPACE  &trans     &trans       &trans       &trans       &trans
 			>;
 		};
 	};
