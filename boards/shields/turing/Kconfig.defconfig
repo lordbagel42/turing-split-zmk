@@ -1,7 +1,7 @@
 # Copyright (c) 2020 Pete Johanson, Kurtis Lew
 # SPDX-License-Identifier: MIT
 
-if SHIELD_Turing_LEFT
+if SHIELD_TURING_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "Turing"
@@ -15,5 +15,12 @@ if SHIELD_TURING_LEFT || SHIELD_TURING_RIGHT
 
 config ZMK_SPLIT
     default y
+
+endif
+
+if SHIELD_TURING_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
 
 endif
