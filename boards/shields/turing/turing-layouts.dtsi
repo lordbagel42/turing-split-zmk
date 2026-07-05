@@ -1,0 +1,83 @@
+/*
+* Copyright (c) 2024 The ZMK Contributors
+*
+* SPDX-License-Identifier: MIT
+*
+* Physical layout for the Turing split. Required for ZMK Studio support.
+* Key positions are listed in the same order as the matrix transform:
+* rows top to bottom, left to right, thumb/inner cluster keys within
+* rows 3 and 4. Coordinates are in centi-keyunits (100 = 1u) and are an
+* approximation of the column stagger for rendering in Studio.
+*/
+
+#include <physical_layouts.dtsi>
+
+/ {
+	turing_layout: turing_layout {
+		compatible = "zmk,physical-layout";
+		display-name = "Turing";
+
+		transform = <&default_transform>;
+		kscan = <&kscan0>;
+
+		keys  //                     w   h    x    y  rot  rx  ry
+			// Row 0
+			= <&key_physical_attrs 100 100    0   30    0   0   0>
+			, <&key_physical_attrs 100 100  100   10    0   0   0>
+			, <&key_physical_attrs 100 100  200    0    0   0   0>
+			, <&key_physical_attrs 100 100  300   10    0   0   0>
+			, <&key_physical_attrs 100 100  400   20    0   0   0>
+			, <&key_physical_attrs 100 100 1000   20    0   0   0>
+			, <&key_physical_attrs 100 100 1100   10    0   0   0>
+			, <&key_physical_attrs 100 100 1200    0    0   0   0>
+			, <&key_physical_attrs 100 100 1300   10    0   0   0>
+			, <&key_physical_attrs 100 100 1400   30    0   0   0>
+			// Row 1
+			, <&key_physical_attrs 100 100    0  130    0   0   0>
+			, <&key_physical_attrs 100 100  100  110    0   0   0>
+			, <&key_physical_attrs 100 100  200  100    0   0   0>
+			, <&key_physical_attrs 100 100  300  110    0   0   0>
+			, <&key_physical_attrs 100 100  400  120    0   0   0>
+			, <&key_physical_attrs 100 100 1000  120    0   0   0>
+			, <&key_physical_attrs 100 100 1100  110    0   0   0>
+			, <&key_physical_attrs 100 100 1200  100    0   0   0>
+			, <&key_physical_attrs 100 100 1300  110    0   0   0>
+			, <&key_physical_attrs 100 100 1400  130    0   0   0>
+			// Row 2
+			, <&key_physical_attrs 100 100    0  230    0   0   0>
+			, <&key_physical_attrs 100 100  100  210    0   0   0>
+			, <&key_physical_attrs 100 100  200  200    0   0   0>
+			, <&key_physical_attrs 100 100  300  210    0   0   0>
+			, <&key_physical_attrs 100 100  400  220    0   0   0>
+			, <&key_physical_attrs 100 100 1000  220    0   0   0>
+			, <&key_physical_attrs 100 100 1100  210    0   0   0>
+			, <&key_physical_attrs 100 100 1200  200    0   0   0>
+			, <&key_physical_attrs 100 100 1300  210    0   0   0>
+			, <&key_physical_attrs 100 100 1400  230    0   0   0>
+			// Row 3 (main + inner cluster upper keys)
+			, <&key_physical_attrs 100 100    0  330    0   0   0>
+			, <&key_physical_attrs 100 100  100  310    0   0   0>
+			, <&key_physical_attrs 100 100  200  300    0   0   0>
+			, <&key_physical_attrs 100 100  300  310    0   0   0>
+			, <&key_physical_attrs 100 100  400  320    0   0   0>
+			, <&key_physical_attrs 100 100  500  330    0   0   0>
+			, <&key_physical_attrs 100 100  600  345    0   0   0>
+			, <&key_physical_attrs 100 100  800  345    0   0   0>
+			, <&key_physical_attrs 100 100  900  330    0   0   0>
+			, <&key_physical_attrs 100 100 1000  320    0   0   0>
+			, <&key_physical_attrs 100 100 1100  310    0   0   0>
+			, <&key_physical_attrs 100 100 1200  300    0   0   0>
+			, <&key_physical_attrs 100 100 1300  310    0   0   0>
+			, <&key_physical_attrs 100 100 1400  330    0   0   0>
+			// Row 4 (thumbs)
+			, <&key_physical_attrs 100 100  200  410    0   0   0>
+			, <&key_physical_attrs 100 100  300  420    0   0   0>
+			, <&key_physical_attrs 100 100  500  440    0   0   0>
+			, <&key_physical_attrs 100 100  600  455    0   0   0>
+			, <&key_physical_attrs 100 100  800  455    0   0   0>
+			, <&key_physical_attrs 100 100  900  440    0   0   0>
+			, <&key_physical_attrs 100 100 1100  420    0   0   0>
+			, <&key_physical_attrs 100 100 1200  410    0   0   0>
+			;
+	};
+};

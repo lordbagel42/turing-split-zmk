@@ -6,6 +6,7 @@ url: https://github.com/lordbagel42/highway-split-keyboard
 requires: [pro_micro]
 features:
   - keys
+  - studio
 siblings:
   - turing_left
   - turing_right
